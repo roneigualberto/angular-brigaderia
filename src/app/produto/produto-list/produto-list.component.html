@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Produtos</h2>
+
+    <div class="row">
+        <div class="fform-group col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                <span class="input-group-btn">
+
+                    <a class="btn btn-primary" routerLink="/produto/form" role="button">Novo Produto</a>
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let produto of produtos">
+                <td>{{produto.nome}}</td>
+                <td>{{produto.descricao}}</td>
+                <td>{{produto.preco | currency}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

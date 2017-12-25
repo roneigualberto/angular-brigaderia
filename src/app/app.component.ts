@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  onActivate(event) {
+    console.log('event', event);
+  }
 }
